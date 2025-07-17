@@ -1,0 +1,227 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: calc(100% - 20px); /* Kích thước đầy đủ trừ padding */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical; /* Cho phép thay đổi kích thước theo chiều dọc */
+}
+
+/* Kiểu cho phần đánh giá sao */
+.stars {
+  font-size: 28px;
+  color: #ccc; /* Màu xám cho sao chưa được chọn */
+  cursor: pointer;
+  display: flex;
+  gap: 5px; /* Khoảng cách giữa các ngôi sao */
+  justify-content: center; /* Canh giữa */
+}
+
+.stars i {
+  transition: color 0.2s ease; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+.stars i.fas {
+  /* Khi sao được chọn */
+  color: #ffc107; /* Màu vàng cam */
+}
+
+.stars i:hover,
+.stars i:hover ~ i {
+  /* Khi hover và các sao sau đó */
+  color: #ffdb58; /* Màu vàng nhạt hơn khi hover */
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+  margin: 30px 0;
+}
+
+.comment-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.comment-item h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.comment-item .rating {
+  color: #ffc107; /* Màu vàng cho sao trong bình luận đã hiển thị */
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.comment-item p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.comment-item .date {
+  font-size: 0.9em;
+  color: #999;
+  text-align: right;
+}
+
+.no-comments-yet {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* --- Game Section Styles --- */
+.game-section {
+  background-color: #e6f7ff; /* Nền xanh nhạt */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px solid #b3e0ff;
+}
+
+.game-section h2 {
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.game-section p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.game-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-input-group input[type="number"] {
+  width: 150px;
+  padding: 10px 15px;
+  border: 1px solid #a8d5ff;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.game-input-group button {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Ngăn nút co lại */
+}
+
+.game-input-group button:hover {
+  background-color: #218838;
+}
+
+.feedback-message {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333; /* Default color */
+}
+
+.feedback-message.correct {
+  color: #28a745; /* Green for correct */
+}
+
+.feedback-message.incorrect {
+  color: #dc3545; /* Red for incorrect */
+}
+
+.reset-button {
+  background-color: #6c757d; /* Gray button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.reset-button:hover {
+  background-color: #5a6268;
+}

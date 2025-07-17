@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web game đoán số cực vui</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Để lại đánh giá của bạn</h1>
+
+      <form id="commentForm">
+        <div class="form-group">
+          <label for="userName">Tên của bạn:</label>
+          <input type="text" id="userName" required />
+        </div>
+
+        <div class="form-group">
+          <label>Đánh giá:</label>
+          <div class="stars" id="ratingStars">
+            <i class="far fa-star" data-value="1"></i>
+            <i class="far fa-star" data-value="2"></i>
+            <i class="far fa-star" data-value="3"></i>
+            <i class="far fa-star" data-value="4"></i>
+            <i class="far fa-star" data-value="5"></i>
+          </div>
+          <input type="hidden" id="ratingValue" value="0" />
+        </div>
+
+        <div class="form-group">
+          <label for="commentText">Bình luận của bạn:</label>
+          <textarea id="commentText" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Gửi Bình Luận</button>
+      </form>
+
+      <hr />
+
+      <div class="game-section">
+        <h2>Trò Chơi Đoán Số</h2>
+        <p>Tôi đang nghĩ một số từ 1 đến 100. Bạn có đoán được không?</p>
+        <div class="game-input-group">
+          <input
+            type="number"
+            id="guessInput"
+            min="1"
+            max="100"
+            placeholder="Nhập số của bạn"
+          />
+          <button id="checkGuessBtn">Đoán!</button>
+        </div>
+        <p id="guessFeedback" class="feedback-message"></p>
+        <p>Số lần đoán: <span id="guessCount">0</span></p>
+        <button id="resetGameBtn" class="reset-button">Chơi lại</button>
+      </div>
+
+      <hr />
+
+      <h2>Các Bình Luận Đã Có</h2>
+      <div id="commentsList">
+        <p class="no-comments-yet">
+          Chưa có bình luận nào. Hãy là người đầu tiên!
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
